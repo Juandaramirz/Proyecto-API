@@ -112,7 +112,7 @@ module.exports = (req, res, next) => {
     return res.status(403).json({ message: 'Credenciales incorrectas' });
   }
 };
-'''
+''
 
 # Guardar archivos
 with open('myapi/src/app.js', 'w') as f:
@@ -129,4 +129,4 @@ with open('myapi/src/middlewares/basicAuth.js', 'w') as f:
 with open('myapi/README.md', 'w') as f:
     f.write(readme_content)
 
-"Estructura y código base creados"
+
