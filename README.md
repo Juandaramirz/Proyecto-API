@@ -46,17 +46,8 @@ npm start
 ### Patrón MVC
 La aplicación se organiza en Modelos (manejo de datos), Controladores (lógica y rutas) y Rutas (definición de endpoints). Esto facilita organización y mantenibilidad.
 
-### Diagrama arquitectónico 
-text
-+-------------+      +----------------+      +------------+
-|   Rutas     | ---> | Controladores  | ---> |   Modelos  |
-+-------------+      +----------------+      +------------+
-text
-
 ### Flujo pipeline CI
-[Push a main] --> [GitHub Actions] --> [Checkout] --> [npm install] --> [eslint] --> [mocha tests] --> [Resultado]
-
-text
+Push a main - GitHub Actions - Checkout - npm install - eslint - mocha tests - Resultado
 
 ## Pruebas
 - Ejemplo de prueba para GET /api/users incluido
