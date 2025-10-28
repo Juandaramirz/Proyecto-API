@@ -1,6 +1,6 @@
 # El proyecto será una API RESTful utilizando el patrón MVC para una arquitectura sencilla, escalable y mantenible.
 # Framework: Express.js para Node.js por su popularidad y ecosistema robusto.
-# Esta primera celda preparará la estructura base y documentación inicial.
+
 
 import os
 
@@ -11,7 +11,7 @@ os.makedirs('myapi/src/routes', exist_ok=True)
 os.makedirs('myapi/tests', exist_ok=True)
 
 # Archivo de configuración principal y paquete básico
-app_js = '''
+app_js = ''
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -124,31 +124,7 @@ with open('myapi/src/controllers/userController.js', 'w') as f:
 with open('myapi/src/middlewares/basicAuth.js', 'w') as f:
     f.write(basic_auth_js)
 
-# Crear archivo README inicial para documentación básica
-readme_content = '''
-# API RESTful con Express.js
 
-## Arquitectura
-Se implementa el patrón MVC para separar responsabilidades: modelo (lógica y datos), vista (no aplica aquí porque es API), y controlador (lógica de negocio y rutas).
-
-## Endpoints
-- GET /api/users: Obtener todos los usuarios (requiere autenticación básica)
-- GET /api/users/:id: Obtener usuario por ID
-- POST /api/users: Crear usuario
-- PUT /api/users/:id: Actualizar usuario
-- DELETE /api/users/:id: Eliminar usuario
-
-## Autenticación
-Se usa autenticación básica con usuario 'admin' y contraseña 'password'.
-
-## Ejecución
-Ejecutar en la terminal:
-
-```
-npm install
-node src/app.js
-```
-'''
 
 with open('myapi/README.md', 'w') as f:
     f.write(readme_content)
