@@ -1,2 +1,68 @@
-# Mini-proyecto-integracion-continua
-Desarrollo de servicios web robustos, aplicando metodologías de ingeniería de software y buenas prácticas de calidad y seguridad.
+# API RESTful con Express.js - Guía de Usuario y Despliegue
+
+## Descripción
+Esta API RESTful implementa gestión básica de usuarios con autentificación básica, organizada según el patrón MVC.
+
+## Requisitos
+- Node.js v16+
+- npm
+- Git
+
+## Instalación
+## Instalación
+Clonar el repositorio
+Instalar dependencias
+npm install
+
+text
+
+## Ejecución
+npm start
+
+## Endpoints
+| Método | Ruta           | Descripción              | Autenticación |
+|--------|----------------|--------------------------|--------------|
+| GET    | /api/users     | Listar usuarios          | Sí           |
+| GET    | /api/users/:id | Obtener usuario por ID   | Sí           |
+| POST   | /api/users     | Crear usuario            | Sí           |
+| PUT    | /api/users/:id | Actualizar usuario       | Sí           |
+| DELETE | /api/users/:id | Eliminar usuario         | Sí           |
+
+## Autenticación
+- Autenticación básica HTTP
+- Usuario: `admin`, Contraseña: `password`
+
+## Pipeline de Integración Continua (CI)
+- Automatiza instalación, análisis de código, ejecución de tests
+- Se ejecuta en GitHub Actions en rama `main`
+- Etapas:
+  - Checkout
+  - Instalación dependencias
+  - ESLint para análisis
+  - Ejecución de pruebas con Mocha
+
+## Arquitectura
+
+### Patrón MVC
+La aplicación se organiza en Modelos (manejo de datos), Controladores (lógica y rutas) y Rutas (definición de endpoints). Esto facilita organización y mantenibilidad.
+
+### Diagrama arquitectónico 
+text
++-------------+      +----------------+      +------------+
+|   Rutas     | ---> | Controladores  | ---> |   Modelos  |
++-------------+      +----------------+      +------------+
+text
+
+### Flujo pipeline CI
+[Push a main] --> [GitHub Actions] --> [Checkout] --> [npm install] --> [eslint] --> [mocha tests] --> [Resultado]
+
+text
+
+## Pruebas
+- Ejemplo de prueba para GET /api/users incluido
+- Uso de Mocha y Chai para tests unitarios e integración
+
+## Comandos útiles
+npm start # Ejecuta el servidor
+npm test # Ejecuta las pruebas
+npm run lint # Ejecuta ESLint
