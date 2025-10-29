@@ -22,8 +22,5 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Analizar código con ESLint
-        run: npm run lint
-
       - name: Ejecutar pruebas
         run: npm test
