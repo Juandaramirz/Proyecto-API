@@ -1,0 +1,29 @@
+name: Node.js CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar código
+        uses: actions/checkout@v3
+
+      - name: Usar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Analizar código con ESLint
+        run: npm run lint
+
+      - name: Ejecutar pruebas
+        run: npm test

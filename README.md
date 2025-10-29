@@ -1,4 +1,4 @@
-# API RESTful con Express.js - Guía de Usuario y Despliegue
+# API RESTful - Guía de Usuario y Despliegue
 
 ## Descripción
 Esta API RESTful implementa gestión básica de usuarios con autentificación básica, organizada según el patrón MVC.
@@ -9,15 +9,15 @@ Esta API RESTful implementa gestión básica de usuarios con autentificación b�
 - Git
 
 ## Instalación
-## Instalación
 Clonar el repositorio
 Instalar dependencias
 npm install
 
-text
 
 ## Ejecución
 npm start
+
+Servidor correrá en http://localhost:3000
 
 ## Endpoints
 | Método | Ruta           | Descripción              | Autenticación |
@@ -46,8 +46,15 @@ npm start
 ### Patrón MVC
 La aplicación se organiza en Modelos (manejo de datos), Controladores (lógica y rutas) y Rutas (definición de endpoints). Esto facilita organización y mantenibilidad.
 
+### Diagrama arquitectónico 
++-------------+      +----------------+      +------------+
+|   Rutas     | ---> | Controladores  | ---> |   Modelos  |
++-------------+      +----------------+      +------------+
+
+
 ### Flujo pipeline CI
-Push a main - GitHub Actions - Checkout - npm install - eslint - mocha tests - Resultado
+[Push a main] --> [GitHub Actions] --> [Checkout] --> [npm install] --> [eslint] --> [mocha tests] --> [Resultado]
+
 
 ## Pruebas
 - Ejemplo de prueba para GET /api/users incluido
