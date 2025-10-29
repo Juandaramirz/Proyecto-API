@@ -58,7 +58,7 @@ La aplicación se organiza en Modelos (manejo de datos), Controladores (lógica 
 
 ## Pruebas
 - Ejemplo de prueba para GET /api/users incluido
-- Uso de Mocha y Chai para tests unitarios e integración
+- Uso de jest: tests unitarios e integración
 
 ## Comandos útiles
 npm start # Ejecuta el servidor
